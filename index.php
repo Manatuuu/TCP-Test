@@ -14,4 +14,7 @@ echo socket_read($sock, strlen($buf));
 $buf = "hellowwwwww\n";
 socket_write($sock, $buf, strlen($buf));
 echo socket_read($sock, strlen($buf));
+while(true){
+    echo socket_read($sock, strlen($buf));
+}
 ?>
