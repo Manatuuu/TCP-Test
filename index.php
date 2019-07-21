@@ -29,8 +29,7 @@
         public function run()
         {
             while(true){
-                echo "a";
-                sleep(1);
+                console_log( "test2" );
             }
         }
     };
