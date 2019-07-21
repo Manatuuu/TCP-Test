@@ -15,6 +15,13 @@
     socket_write($sock, $buf, strlen($buf));
     //echo socket_read($sock, strlen($buf));
     echo socket_read($sock, 1024);
+    function console_log( $data ){
+        echo '<script>';
+        echo 'console.log('. json_encode( $data ) .')';
+        echo '</script>';
+    }
+
+    console_log( "test" );
 
     $task = new class extends Thread {
         private $response;
