@@ -15,4 +15,15 @@
     socket_write($sock, $buf, strlen($buf));
     //echo socket_read($sock, strlen($buf));
     echo socket_read($sock, 1024);
+
+    class workerThread extends Thread {
+        public function run(){
+            while(true){
+                echo "a";
+                sleep(1);
+            }
+        }
+    }
+    $testThread = new workerThread();
+    $testThread->start();
 ?>
