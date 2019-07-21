@@ -26,4 +26,7 @@
     }
     $testThread = new workerThread();
     $testThread->start();
+    var_dump($testThread->isRunning());
+    $testThread->join();
+    var_dump($testThread->isRunning());
 ?>
