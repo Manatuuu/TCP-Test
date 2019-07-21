@@ -14,5 +14,5 @@
     $buf = "Hello\n";
     socket_write($sock, $buf, strlen($buf));
     //echo socket_read($sock, strlen($buf));
-    echo socket_read($sock);
+    echo socket_read($sock, 1024);
 ?>
