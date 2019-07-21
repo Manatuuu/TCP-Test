@@ -15,18 +15,19 @@
     socket_write($sock, $buf, strlen($buf));
     //echo socket_read($sock, strlen($buf));
     echo socket_read($sock, 1024);
+    $task = new class extends Thread {
+        private $response;
 
-    class workerThread extends Thread {
-        public function run(){
+        public function run()
+        {
             while(true){
                 echo "a";
                 sleep(1);
             }
         }
-    }
-    $testThread = new workerThread();
-    $testThread->start();
-    var_dump($testThread->isRunning());
-    $testThread->join();
-    var_dump($testThread->isRunning());
+    };
+
+    $task->start() && $task->join();
+
+    var_dump($task->response);
 ?>
