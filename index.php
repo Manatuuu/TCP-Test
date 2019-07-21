@@ -15,6 +15,7 @@
     socket_write($sock, $buf, strlen($buf));
     //echo socket_read($sock, strlen($buf));
     echo socket_read($sock, 1024);
+
     $task = new class extends Thread {
         private $response;
 
@@ -30,4 +31,5 @@
     $task->start() && $task->join();
 
     var_dump($task->response);
+
 ?>
