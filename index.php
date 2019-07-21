@@ -11,7 +11,7 @@ $buf = "NICK:Test\n";
 socket_write($sock, $buf, strlen($buf));
 echo socket_read($sock, strlen($buf));
 
-$buf = "hello\n";
+$buf = "hellowwwwww\n";
 socket_write($sock, $buf, strlen($buf));
 echo socket_read($sock, strlen($buf));
 ?>
