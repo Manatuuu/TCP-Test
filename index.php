@@ -23,8 +23,4 @@
 
     console_log( "test" );
 
-    while(true){
-        echo socket_read($sock, 1024);
-    }
-
 ?>
