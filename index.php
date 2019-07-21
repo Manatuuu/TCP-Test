@@ -28,8 +28,14 @@
 
         public function run()
         {
+            function console_log2( $data ){
+                echo '<script>';
+                echo 'console.log('. json_encode( $data ) .')';
+                echo '</script>';
+            }
+
             while(true){
-                console_log( "test2" );
+                console_log2( "test2" );
             }
         }
     };
