@@ -23,19 +23,8 @@
 
     console_log( "test" );
 
-    $task = new class extends Thread {
-        private $response;
-
-        public function run()
-        {
-            while(true){
-                echo socket_read($sock, 1024);
-            }
-        }
-    };
-
-    $task->start() && $task->join();
-
-    var_dump($task->response);
+    while(true){
+        echo socket_read($sock, 1024);
+    }
 
 ?>
